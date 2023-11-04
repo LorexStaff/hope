@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hope", "hope.csproj", "{5FE6C0B6-0D91-4CEA-8624-DF3433BA49D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBase_LB3", "..\DataBase_LB3\DataBase_LB3.csproj", "{85898624-F429-46AA-B97F-6301574F3973}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5FE6C0B6-0D91-4CEA-8624-DF3433BA49D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FE6C0B6-0D91-4CEA-8624-DF3433BA49D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FE6C0B6-0D91-4CEA-8624-DF3433BA49D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FE6C0B6-0D91-4CEA-8624-DF3433BA49D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85898624-F429-46AA-B97F-6301574F3973}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85898624-F429-46AA-B97F-6301574F3973}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85898624-F429-46AA-B97F-6301574F3973}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85898624-F429-46AA-B97F-6301574F3973}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C06B6EF5-5D24-4748-9BE1-FF093770F86B}
+	EndGlobalSection
+EndGlobal

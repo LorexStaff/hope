@@ -1,0 +1,51 @@
+﻿<Window x:Class="hope.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:hope"
+        mc:Ignorable="d"
+        Title="Клиент-серверное приложение" Height="450" Width="800">
+    <Grid>
+        <!-- Создаем таблицу для размещения элементов -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <!-- Создаем кнопку для загрузки данных с сервера -->
+        <ToggleButton Content="Загрузить" IsChecked="{Binding LoadCommand}" Grid.Row="0" Grid.Column="0" Margin="10"/>
+        <!-- Создаем таблицу для отображения данных из базы данных -->
+        <DataGrid ItemsSource="{Binding Flowers}" SelectedItem="{Binding SelectedFlower}" AutoGenerateColumns="False" Grid.Row="1" Grid.Column="0" Margin="10">
+            <DataGrid.Columns>
+                <!-- Создаем столбцы для каждого свойства цветка -->
+                <DataGridTextColumn Header="Название" Binding="{Binding Name}" IsReadOnly="False"/>
+                <DataGridTextColumn Header="Регион" Binding="{Binding Region}" IsReadOnly="False"/>
+                <DataGridTextColumn Header="Цена" Binding="{Binding Price}" IsReadOnly="False"/>
+                <DataGridCheckBoxColumn Header="Редкий" Binding="{Binding Rare}" IsReadOnly="False"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <!-- Создаем панель для ввода данных нового цветка -->
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="10">
+            <!-- Создаем поля для каждого свойства цветка -->
+            <Label Content="Название:"/>
+            <TextBox Text="{Binding NewName}"/>
+            <Label Content="Регион:"/>
+            <TextBox Text="{Binding NewRegion}"/>
+            <Label Content="Цена:"/>
+            <TextBox Text="{Binding NewPrice}"/>
+            <Label Content="Редкий:"/>
+            <CheckBox IsChecked="{Binding NewRare}"/>
+            <!-- Создаем кнопку для добавления нового цветка -->
+            <ToggleButton Content="Добавить" IsChecked="{Binding AddCommand}" Margin="0,10,0,0"/>
+        </StackPanel>
+        <!-- Создаем кнопку для удаления выбранного цветка -->
+        <ToggleButton Content="Удалить" IsChecked="{Binding DeleteCommand}" Grid.Row="2" Grid.Column="0" Margin="10"/>
+        <!-- Создаем кнопку для сохранения данных на сервер -->
+        <ToggleButton Content="Сохранить" IsChecked="{Binding SaveCommand}" Grid.Row="2" Grid.Column="1" Margin="10"/>
+    </Grid>
+</Window>
